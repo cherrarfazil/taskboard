@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}My boards{% endblock %}
+{% block content %}
+<h2>My boards</h2>
+{% for board in boards %}
+  <div class="card mb-2"><div class="card-body">{{ board.title }}</div></div>
+{% empty %}
+  <p class="text-muted">You don't have any boards yet.</p>
+{% endfor %}
+{% endblock %}
